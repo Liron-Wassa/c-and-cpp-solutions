@@ -234,14 +234,23 @@ int main() {
     // };
 
     // ============================================================================= laboratory 4.7
+    
+    // int number, binaryFormat = 0, numberDigits = 0, numberPosition = 0;
 
     // printf("Enter a number:\n");
     // scanf("%d", &number);
-    
+
     // while (number > 0) {
-    //     printf("%d", number % 2);
+    //     if (number % 2 != 0) {
+    //         numberDigits = pow(10, numberPosition);
+    //         binaryFormat += numberDigits * (number % 2);
+    //     };
+
+    //     numberPosition++;
     //     number /= 2;
     // };
+
+    // printf("%d\n", binaryFormat);
 
     // ============================================================================= laboratory 4.8
 
@@ -446,6 +455,242 @@ int main() {
     // };
 
     // ============================================================================= additional 4.1
+
+    // int number, binaryFormat = 0, fourBaseFormat = 0, eightBaseFormat = 0, numberDigits = 0, numberPosition = 0;
+
+    // printf("Enter a number:\n");
+    // scanf("%d", &number);
+
+    // while (number > 0) {
+    //     if (number % 2 != 0) {
+    //         numberDigits = pow(10, numberPosition);
+    //         binaryFormat += numberDigits * (number % 2);
+    //     };
+
+    //     numberPosition++;
+    //     number /= 2;
+    // };
+
+    // while (number > 0) {
+    //     if (number % 4 != 0) {
+    //         numberDigits = pow(10, numberPosition);
+    //         fourBaseFormat += numberDigits * (number % 4);
+    //     };
+
+    //     numberPosition++;
+    //     number /= 4;
+    // };
+
+    // while (number > 0) {
+    //     if (number % 8 != 0) {
+    //         numberDigits = pow(10, numberPosition);
+    //         eightBaseFormat += numberDigits * (number % 8);
+    //     };
+
+    //     numberPosition++;
+    //     number /= 8;
+    // };
+
+    // printf("Base 2: %d\n", binaryFormat);
+    // printf("Base 4: %d\n", fourBaseFormat);
+    // printf("Base 8: %d\n", eightBaseFormat);
+
+    // ============================================================================= additional 4.2
+
+    // int number, binaryNumber, prevBinaryNum, counter = 0, counterOne = 0, counterZero = 0, maxOne = 0, maxZero = 0;
+    
+    // printf("Enter a number:\n");
+    // scanf("%d", &number);
+
+    // do {
+    //     printf("Enter a binary number:\n");
+    //     scanf("%d", &binaryNumber);
+
+    //     if (binaryNumber != prevBinaryNum && binaryNumber == 1) {
+    //         counterOne = 0;
+    //         counterOne++;
+    //     } else if(binaryNumber != prevBinaryNum && binaryNumber == 0) {
+    //         counterZero = 0;
+    //         counterZero++;
+    //     };
+
+    //     if (binaryNumber == prevBinaryNum && binaryNumber == 1) {
+    //         counterOne++;
+    //     } else if (binaryNumber == prevBinaryNum && binaryNumber == 0) {
+    //         counterZero++;
+    //     };
+
+    //     maxOne = maxOne > counterOne ? maxOne : counterOne;
+    //     maxZero = maxZero > counterZero ? maxZero : counterZero;
+        
+    //     prevBinaryNum = binaryNumber;
+    //     counter++;
+    // } while(counter < number);
+
+    // printf("Length of longest sequence of 1 is: %d, and of 0 is: %d\n", maxOne, maxZero);
+
+    // ============================================================================= additional 4.3
+
+    // int number, prevNum, risingSeriesSum = 0, counter = 0;
+
+    // printf("Enter a number:\n");
+    // scanf("%d", &number);
+
+    // if (number != -1) {
+    //     risingSeriesSum = 1;
+    // };
+
+    // while (number != -1) {
+    //     if (number > prevNum) {
+    //         counter++;
+    //     } else {
+    //        counter = 1;
+    //     };
+
+    //     risingSeriesSum = risingSeriesSum > counter ? risingSeriesSum : counter;
+    //     prevNum = number;
+
+    //     printf("Enter a number:\n");
+    //     scanf("%d", &number);
+    // };
+
+    // printf("Longest rising subseries is: %d\n", risingSeriesSum);
+
+    // ============================================================================= additional 4.4
+
+    // int number, prevNum, risingSeriesSum = 0, tempRisingSeriesSum = 0;
+
+    // printf("Enter a number:\n");
+    // scanf("%d", &number);
+
+    // if (number != -1) {
+    //     risingSeriesSum = number;
+    // };
+
+    // while (number != -1) {
+    //     if (number > prevNum) {
+    //         tempRisingSeriesSum += number;
+    //     } else {
+    //        tempRisingSeriesSum = number;
+    //     };
+
+    //     risingSeriesSum = risingSeriesSum > tempRisingSeriesSum ? risingSeriesSum : tempRisingSeriesSum;
+    //     prevNum = number;
+
+    //     printf("Enter a number:\n");
+    //     scanf("%d", &number);
+    // };
+
+    // printf("Longest rising subseries sum is: %d\n", risingSeriesSum);
+
+    // ============================================================================= additional 4.5
+
+    // int number, sumOfSeries = 0, result = 0, isMatchNumberExist = 0;
+
+    // printf("Enter a number:\n");
+    // scanf("%d", &number);
+
+    // while (number != -1) {
+    //     if (number == sumOfSeries) {
+    //         result = number;
+    //         isMatchNumberExist = 1;
+    //     };
+
+    //     sumOfSeries += number;
+
+    //     printf("Enter a number:\n");
+    //     scanf("%d", &number);
+    // };
+
+    // if (isMatchNumberExist) {
+    //     printf("Number is: %d\n", result);
+    // } else {
+    //     printf("No such number exists\n");
+    // };
+
+    // ============================================================================= additional 4.6
+
+    // int number, muchNumber, prevNumber, prevPrevNumber, muchPrevNumber, sumOfSeries = 0, result = 0, isMatchNumberExist = 0, counter = 0;
+
+    // printf("Enter a number:\n");
+    // scanf("%d", &number);
+
+    // while (number != -1) {
+    //     if (number == sumOfSeries) {
+    //         muchNumber = number;
+    //         muchPrevNumber = prevNumber;
+    //         result = muchNumber - muchPrevNumber;
+    //         isMatchNumberExist = 1;
+    //     };
+        
+    //     if (counter > 1 && counter % 2 == 0) {
+    //         sumOfSeries -= prevPrevNumber;
+    //     } else {
+    //         sumOfSeries += number;
+    //     };
+
+    //     prevPrevNumber = prevNumber;
+    //     prevNumber = number;
+    //     counter++;
+    
+    //     printf("Enter a number:\n");
+    //     scanf("%d", &number);
+    // };
+
+    // if (isMatchNumberExist) {
+    //     printf("%d - %d = %d\n", muchNumber, muchPrevNumber, result);
+    // } else {
+    //     printf("No such pair exists\n");
+    // };
+
+    // ============================================================================= additional 4.7
+
+    // int i, n;
+    // double a1, an, sum, x, power = 1;
+
+    // printf("Enter n:\n");
+    // scanf("%d", &n);
+
+    // printf("Enter x:\n");
+    // scanf("%lf", &x);
+
+    // for (i = 0; i < 2 * n - 1; i++) {
+    //     power *= x;
+    // };
+
+    // a1 = 1 / x;
+    // an = 1 / ((2 * n - 1) * power);
+    // sum = (n * (a1 + an)) / 2;
+    
+    // printf("Sum is: %lf\n", sum);
+
+    // ============================================================================= additional 4.8
+
+    int i, n;
+    double a1, an, sum, x, power = 1, sign = 1, assembly = 1;
+
+    printf("Enter n:\n");
+    scanf("%d", &n);
+
+    printf("Enter x:\n");
+    scanf("%lf", &x);
+
+    for (i = 2 * n - 2; i > 1; i--) {
+        assembly *= i;
+        power *= x;
+    };
+    
+    if (n % 2 == 0) {
+        sign = -1;
+    };
+
+    power *= x;
+
+    a1 = x;
+    an = sign * (power / assembly);
+    // sum = (n * (a1 + an)) / 2;
+    
+    printf("Sum is: %lf\n", sum);
 
     return 0;
 };
