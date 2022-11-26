@@ -88,6 +88,7 @@ int main () {
     //     int prevDigit;
     //     int differenceBetweenNumbers;
     //     int prevDifferenceBetweenNumbers;
+    
     //     int longestSequence = 2;
     //     int prevLongestSequence = 2;
     //     int sum = 0;
@@ -116,31 +117,20 @@ int main () {
     //         if (differenceBetweenNumbers == prevDifferenceBetweenNumbers) {
     //             sum += digit;
     //             longestSequence++;
-    //         } else if (longestSequence > prevLongestSequence) {
-    //             maxSum = sum;
-    //             sum = prevDigit + digit;
-    //             prevLongestSequence = longestSequence;
-    //             longestSequence = 2;
-    //         } else if (longestSequence == prevLongestSequence && sum > maxSum) {
-    //             maxSum = sum;
-    //             sum = prevDigit + digit;
-    //             prevLongestSequence = longestSequence;
-    //             longestSequence = 2;
+        
+    //             if (longestSequence > prevLongestSequence) {
+    //                 maxSum = sum;
+    //                 prevLongestSequence = longestSequence;
+    //             } else if (longestSequence == prevLongestSequence && sum > maxSum) {
+    //                 maxSum = sum;
+    //             };
     //         } else {
     //             sum = prevDigit + digit;
     //             longestSequence = 2;
     //         };
-            
+
     //         prevDifferenceBetweenNumbers = differenceBetweenNumbers;
     //         prevDigit = digit;
-
-    //         if (i == number - 1) {
-    //             if (longestSequence > prevLongestSequence) {
-    //                 maxSum = sum;
-    //             } else if (longestSequence == prevLongestSequence && sum > maxSum) {
-    //                 maxSum = sum;
-    //             };
-    //         };
     //     };
 
     //     return maxSum;
