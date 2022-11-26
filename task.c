@@ -10,15 +10,27 @@ int main () {
     //     int differenceBetweenNumbers;
     //     int prevDifferenceBetweenNumbers;
     //     int longestSequence = 2;
-    //     int prevLongestSequence = 0;
+    //     int prevLongestSequence = 2;
     //     int sum = 0;
     //     int maxSum = 0;
+    
+    //     printf("Enter a number:\n");
+    //     scanf("%d", &prevDigit);
 
-    //     for (i = 0; i < number; i++) {
+    //     if (number == 1) return prevDigit;
+
+    //     printf("Enter a number:\n");
+    //     scanf("%d", &digit);
+
+    //     if (number == 2) return digit + prevDigit;
+    
+    //     prevDifferenceBetweenNumbers = digit - prevDigit;
+    //     sum = prevDigit + digit;
+    //     prevDigit = digit;
+
+    //     for (i = 2; i < number; i++) {
     //         printf("Enter a number:\n");
     //         scanf("%d", &digit);
-
-    //         if (number == 1) return digit;
 
     //         differenceBetweenNumbers = digit - prevDigit;
 
@@ -29,6 +41,12 @@ int main () {
     //             maxSum = sum;
     //             sum = prevDigit + digit;
     //             prevLongestSequence = longestSequence;
+    //             longestSequence = 2;
+    //         } else if (longestSequence == prevLongestSequence && sum > maxSum) {
+    //             maxSum = sum;
+    //             sum = prevDigit + digit;
+    //             prevLongestSequence = longestSequence;
+    //             longestSequence = 2;
     //         } else {
     //             sum = prevDigit + digit;
     //             longestSequence = 2;
@@ -36,13 +54,17 @@ int main () {
             
     //         prevDifferenceBetweenNumbers = differenceBetweenNumbers;
     //         prevDigit = digit;
+
+    //         if (i == number - 1) {
+    //             if (longestSequence > prevLongestSequence) {
+    //                 maxSum = sum;
+    //             } else if (longestSequence == prevLongestSequence && sum > maxSum) {
+    //                 maxSum = sum;
+    //             };
+    //         };
     //     };
 
-    //     if (prevLongestSequence > 2) {
-    //         return maxSum;
-    //     } else {
-    //         return sum;
-    //     };
+    //     return maxSum;
     // };
 
     // int numberLength(int number) {
