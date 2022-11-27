@@ -14,7 +14,7 @@ int main () {
     //     return sum;
     // };
 
-    // int validateId (int id) {
+    // int checkID (int id) {
     //     int sum = 0, sumOfDigit, digitIndex = 1, numberToMultiple = 1;
     
     //     while (id > 0) {
@@ -32,55 +32,6 @@ int main () {
 
     //     return sum % 10 == 0;
     // };
-
-    // void printId (int number, int zeroPrefix) {
-    //     int i, digit;
-    //     for (i = 0; i < zeroPrefix; i++)
-    //     {
-    //         printf("0");
-    //     };
-
-    //     while (number > 0)
-    //     {
-    //         digit = number % 10;
-    //         printf("%c", 48 + digit);
-    //         number /= 10;
-    //     };
-
-    //     printf("\n");
-    // };
-
-    // int revertNumber (int number) {
-    //     int digit, revertedNumber = 0, numberDigit = log10(number), powDigit = pow(10, numberDigit);
-
-    //     while (number > 0)
-    //     {
-    //         digit = number % 10;
-    //         revertedNumber += digit * powDigit;
-    //         powDigit /= 10;
-    //         number /= 10;
-    //     };
-
-    //     return revertedNumber;
-    // };
-
-    // int numberLength(int number) {
-    //     return (int)log10(number) + 1;
-    // };
-
-    // int checkID (int id) {
-    //     int revertedNumber, numberDigit = numberLength(id), numberZeroToPrint = 0;
-
-    //     if (numberDigit < 9)
-    //     {
-    //         numberZeroToPrint = 9 - numberDigit;
-    //     };
-
-    //     revertedNumber = revertNumber(id);
-    //     printId(revertedNumber, numberZeroToPrint);
-
-    //     return validateId(id);
-    // };
     
     // int sumLongestArithmeticList(int number) {
     //     int i;
@@ -95,12 +46,12 @@ int main () {
     //     int maxSum = 0;
     
     //     printf("Enter a number:\n");
-    //     scanf("%d", &prevDigit);
+    //     scanf_s("%d", &prevDigit);
 
     //     if (number == 1) return prevDigit;
 
     //     printf("Enter a number:\n");
-    //     scanf("%d", &digit);
+    //     scanf_s("%d", &digit);
 
     //     if (number == 2) return digit + prevDigit;
     
@@ -110,7 +61,7 @@ int main () {
 
     //     for (i = 2; i < number; i++) {
     //         printf("Enter a number:\n");
-    //         scanf("%d", &digit);
+    //         scanf_s("%d", &digit);
 
     //         differenceBetweenNumbers = digit - prevDigit;
 
@@ -136,6 +87,10 @@ int main () {
     //     return maxSum;
     // };
     
+    // int numberLength(int number) {
+    //     return (int)log10(number) + 1;
+    // };
+
     // int rotateNumber(int spins, int number) {
     //     int i;
     //     int firstDigit;
