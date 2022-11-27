@@ -1,110 +1,194 @@
-#include<stdio.h>
-#include<math.h>
+#include <stdio.h>
+#include <math.h>
 
-int main () {
+int main()
+{
+    int sumDigits(int number)
+    {
+        int sum = 0;
 
-    // int sumDigits(int numbers) {
-    //     int sum = 0;
+        while (number > 0)
+        {
+            sum += number % 10;
+            number /= 10;
+        };
 
-    //     while (numbers > 0) {
-    //         sum += numbers % 10;
-    //         numbers /= 10;
-    //     };
+        return sum;
+    };
 
-    //     return sum;
-    // };
+    int checkID(int id)
+    {
+        int sum = 0, sum_of_digit, digit_index = 1, number_to_multiple = 1;
 
-    // int checkID (int id) {
-    //     int sum = 0, sumOfDigit, digitIndex = 1, numberToMultiple = 1;
-    
-    //     while (id > 0) {
-    //         numberToMultiple = digitIndex % 2 == 0 ? 2 : 1;
-    //         sumOfDigit = (id % 10) * numberToMultiple;
+        while (id > 0)
+        {
+            number_to_multiple = digit_index % 2 == 0 ? 2 : 1;
+            sum_of_digit = (id % 10) * number_to_multiple;
 
-    //         if (sumOfDigit > 9) {
-    //             sumOfDigit = (sumOfDigit % 10) + (sumOfDigit / 10);
-    //         };
+            if (sum_of_digit > 9)
+            {
+                sum_of_digit = sumDigits(sum_of_digit);
+            };
 
-    //         digitIndex++;
-    //         sum += sumOfDigit;
-    //         id /= 10;
-    //     };
+            digit_index++;
+            sum += sum_of_digit;
+            id /= 10;
+        };
 
-    //     return sum % 10 == 0;
-    // };
-    
-    // int sumLongestArithmeticList(int number) {
-    //     int i;
-    //     int digit;
-    //     int prevDigit;
-    //     int differenceBetweenNumbers;
-    //     int prevDifferenceBetweenNumbers;
-    
-    //     int longestSequence = 2;
-    //     int prevLongestSequence = 2;
-    //     int sum = 0;
-    //     int maxSum = 0;
-    
-    //     printf("Enter a number:\n");
-    //     scanf_s("%d", &prevDigit);
+        return sum % 10 == 0;
+    };
 
-    //     if (number == 1) return prevDigit;
+    void Ex1()
+    {
+        int id_number;
 
-    //     printf("Enter a number:\n");
-    //     scanf_s("%d", &digit);
+        printf("Enter an id:\n");
+        scanf_s("%d", &id_number);
+        printf("Is valid id?: %d\n", checkID(id_number));
+    };
 
-    //     if (number == 2) return digit + prevDigit;
-    
-    //     prevDifferenceBetweenNumbers = digit - prevDigit;
-    //     sum = prevDigit + digit;
-    //     prevDigit = digit;
+    int sumLongestArithmeticList(int number)
+    {
+        int i;
+        int digit;
+        int prev_digit;
+        int difference_between_numbers;
+        int prev_difference_between_numbers;
 
-    //     for (i = 2; i < number; i++) {
-    //         printf("Enter a number:\n");
-    //         scanf_s("%d", &digit);
+        int longest_sequence = 2;
+        int prev_longest_sequence = 2;
+        int sum = 0;
+        int max_sum = 0;
 
-    //         differenceBetweenNumbers = digit - prevDigit;
+        printf("Enter a number:\n");
+        scanf_s("%d", &prev_digit);
 
-    //         if (differenceBetweenNumbers == prevDifferenceBetweenNumbers) {
-    //             sum += digit;
-    //             longestSequence++;
-        
-    //             if (longestSequence > prevLongestSequence) {
-    //                 maxSum = sum;
-    //                 prevLongestSequence = longestSequence;
-    //             } else if (longestSequence == prevLongestSequence && sum > maxSum) {
-    //                 maxSum = sum;
-    //             };
-    //         } else {
-    //             sum = prevDigit + digit;
-    //             longestSequence = 2;
-    //         };
+        if (number == 1)
+            return prev_digit;
 
-    //         prevDifferenceBetweenNumbers = differenceBetweenNumbers;
-    //         prevDigit = digit;
-    //     };
+        printf("Enter a number:\n");
+        scanf_s("%d", &digit);
 
-    //     return maxSum;
-    // };
-    
-    // int numberLength(int number) {
-    //     return (int)log10(number) + 1;
-    // };
+        if (number == 2)
+            return digit + prev_digit;
 
-    // int rotateNumber(int spins, int number) {
-    //     int i;
-    //     int firstDigit;
-    //     int logNumber = numberLength(number) - 1;
-    //     int powNumber = pow(10, logNumber);
+        prev_difference_between_numbers = digit - prev_digit;
+        sum = prev_digit + digit;
+        prev_digit = digit;
 
-    //     for (i = 0; i < (spins % numberLength(number)); i++) {
-    //         firstDigit = number % 10;
-    //         number /= 10;
-    //         number += firstDigit * powNumber;
-    //     };
+        for (i = 2; i < number; i++)
+        {
+            printf("Enter a number:\n");
+            scanf_s("%d", &digit);
 
-    //     return number;
-    // };
+            difference_between_numbers = digit - prev_digit;
+
+            if (difference_between_numbers == prev_difference_between_numbers)
+            {
+                sum += digit;
+                longest_sequence++;
+
+                if (longest_sequence > prev_longest_sequence)
+                {
+                    max_sum = sum;
+                    prev_longest_sequence = longest_sequence;
+                }
+                else if (longest_sequence == prev_longest_sequence && sum > max_sum)
+                {
+                    max_sum = sum;
+                };
+            }
+            else
+            {
+                sum = prev_digit + digit;
+                longest_sequence = 2;
+            };
+
+            prev_difference_between_numbers = difference_between_numbers;
+            prev_digit = digit;
+        };
+
+        return max_sum;
+    };
+
+    void Ex2()
+    {
+        int number_of_list_input;
+
+        printf("Enter a number of list input:\n");
+        scanf_s("%d", &number_of_list_input);
+        printf("The sum of longest list is: %d\n", sumLongestArithmeticList(number_of_list_input));
+    };
+
+    int numberLength(int number)
+    {
+        return (int)log10(number) + 1;
+    };
+
+    int rotateNumber(int spins, int number)
+    {
+        int i;
+        int first_digit;
+        int log_number = numberLength(number) - 1;
+        int pow_number = pow(10, log_number);
+
+        for (i = 0; i < (spins % numberLength(number)); i++)
+        {
+            first_digit = number % 10;
+            number /= 10;
+            number += first_digit * pow_number;
+        };
+
+        return number;
+    };
+
+    void Ex3()
+    {
+        int number_to_rotate, number_of_spins;
+
+        printf("Enter a number to rotate:\n");
+        scanf_s("%d", &number_to_rotate);
+        printf("Enter a spins number:\n");
+        scanf_s("%d", &number_of_spins);
+        printf("Rotated number is: %d\n", rotateNumber(number_of_spins, number_to_rotate));
+    };
+
+    int select = 0, i, all_Ex_in_loop = 0;
+    printf("Run menu once or cyclically?\n(Once - enter 0, cyclically - enter other number) ");
+    if (scanf_s("%d", &all_Ex_in_loop) == 1)
+    {
+        do
+        {
+            for (i = 1; i <= 3; i++)
+            {
+                printf("Ex%d--->%d\n", i, i);
+            };
+
+            printf("EXIT-->0\n");
+
+            do
+            {
+                select = 0;
+                printf("please select 0-%d : ", 3);
+                scanf_s("%d", &select);
+
+            } while ((select < 0) || (select > 3));
+
+            switch (select)
+            {
+            case 1:
+                Ex1();
+                break;
+            case 2:
+                Ex2();
+                break;
+            case 3:
+                Ex3();
+                break;
+            };
+
+        } while (all_Ex_in_loop && select);
+    };
 
     return 0;
 };
