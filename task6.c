@@ -23,15 +23,15 @@ int main() {
     // scanf("%d", &number);
 
     // int getFibNumber(int number) {
-    //     int i, nextNextNum = number, prevNum = 0, nextNum = 1;
+    //     int i, currentNum = number, prevPrevNum = 0, prevNum = 1;
 
     //     for (i = 2; i <= number; i++) {
-    //         nextNextNum = prevNum + nextNum;
-    //         prevNum = nextNum;
-    //         nextNum = nextNextNum;
+    //         currentNum = prevPrevNum + prevNum;
+    //         prevPrevNum = prevNum;
+    //         prevNum = currentNum;
     //     };
 
-    //     return nextNextNum;
+    //     return currentNum;
     // };
 
     // int getFibNumber(int number) {
@@ -107,6 +107,185 @@ int main() {
     // PrintDescendingAndAscendingNumbers(10);
 
     // ============================================================================= class 6.5
+
+    // float number;
+    // int powerNumber;
+
+    // printf("Enter a number:\n");
+    // scanf("%f", &number);
+
+    // printf("Enter a power:\n");
+    // scanf("%d", &powerNumber);
+
+    // float power(float x, int n) {
+    //     if (n == 0) return 1;
+    //     if (n == 1) return x;
+
+    //     return x * power(x, n - 1);
+    // };
+
+    // printf("Result is: %f\n", power(number, powerNumber));
+
+    // ============================================================================= laboratory 6.1
+
+    // int number;
+
+    // printf("Enter a number:\n");
+    // scanf("%d", &number);
+
+    // int lucasSeriesRecursion(int number) {
+    //     if (number == 0) return 2;
+    //     if (number == 1) return 1;
+
+    //     return lucasSeriesRecursion(number - 1) + lucasSeriesRecursion(number - 2);
+    // };
+
+    // int lucasSeriesIterative(int number) {
+    //     int i, currentNum = number, prevPrevNum = 2, prevNum = 1;
+
+    //     if (number == 0) return 2;
+
+    //     for (i = 2; i <= number; i++) {
+    //         currentNum = prevNum + prevPrevNum;
+    //         prevPrevNum = prevNum;
+    //         prevNum = currentNum;
+    //     };
+
+    //     return currentNum;
+    // };
+
+    // printf("Result is: %d\n", lucasSeriesIterative(number));
+
+    // ============================================================================= laboratory 6.2
+
+    // int number;
+
+    // printf("Enter a number:\n");
+    // scanf("%d", &number);
+
+    // int palSequenceRecursion(int number) {
+    //     if (number == 0) return 0;
+    //     if (number == 1) return 1;
+
+    //     return 2 * palSequenceRecursion(number - 1) + palSequenceRecursion(number - 2);
+    // };
+
+    // int palSequenceIterative(int number) {
+    //     int i, currentNum = number, prevPrevNum = 0, prevNum = 1;
+
+    //     for (i = 2; i <= number; i++) {
+    //         currentNum = prevPrevNum + 2 * prevNum;
+    //         prevPrevNum = prevNum;
+    //         prevNum = currentNum;
+    //     };
+
+    //     return currentNum;
+    // };
+
+    // printf("Result is: %d\n", palSequenceIterative(number));
+
+    // ============================================================================= laboratory 6.3
+
+    // int number;
+
+    // printf("Enter a number:\n");
+    // scanf("%d", &number);
+
+    // int someSequenceRecursion(int number) {
+    //     if (number >= 0 && number <= 2) return 1;
+
+    //     if (number % 2 != 0) {
+    //         return someSequenceRecursion(number - 1) - someSequenceRecursion(number - 3);
+    //     } else {
+    //         return someSequenceRecursion(number - 1) + someSequenceRecursion(number - 2) + someSequenceRecursion(number - 3);
+    //     };
+    // };
+
+    // int someSequenceIterative(int number) {
+    //     int i, currentNum = number, prevPrevPrevNum = 1, prevPrevNum = 1, prevNum = 1;
+
+    //     if (number >= 0 && number <= 2) return 1;
+
+    //     for (i = 3; i <= number; i++) {
+    //         if (i % 2 != 0) {
+    //             currentNum = prevNum - prevPrevPrevNum;
+    //             prevPrevPrevNum = prevPrevNum;
+    //             prevPrevNum = prevNum;
+    //             prevNum = currentNum;
+    //         } else {
+    //             currentNum = prevPrevPrevNum + prevPrevNum + prevNum;
+    //             prevPrevPrevNum = prevPrevNum;
+    //             prevPrevNum = prevNum;
+    //             prevNum = currentNum;
+    //         };
+    //     };
+
+    //     return currentNum;
+    // };
+
+    // printf("Result is Recursion: %d\n", someSequenceRecursion(number));
+
+    // ============================================================================= laboratory 6.4
+
+    // int number;
+
+    // printf("Enter a number:\n");
+    // scanf("%d", &number);
+
+    // int getLargestNumber(int number) {
+    //     int digit;
+
+    //     printf("Enter a digit:\n");
+    //     scanf("%d", &digit);
+
+    //     if (number == 1) return digit;
+    //     if (digit > getLargestNumber(number - 1)) return digit;
+    // };
+
+    // printf("Largest number in the lis is: %d\n", getLargestNumber(number));
+
+    // ============================================================================= laboratory 6.5
+
+    // int number;
+
+    // printf("Enter a number:\n");
+    // scanf("%d", &number);
+
+    // int getSmallestNumber(int number) {
+    //     int digit;
+    
+    //     printf("Enter a digit:\n");
+    //     scanf("%d", &digit);
+
+    //     if (number == 1) return digit;
+    //     if (digit < getSmallestNumber(number - 1)) return digit;
+    // };
+
+    // printf("Smallest number in the lis is: %d\n", getSmallestNumber(number));
+
+    // ============================================================================= laboratory 6.6
+
+    // void PrintBinaryNumber(int number) {
+    //     if (number != 1 && number != 0) PrintBinaryNumber(number / 2);
+    //     printf("%d", number % 2);
+    // };
+
+    // PrintBinaryNumber(13);
+
+    // ============================================================================= laboratory 6.7
+
+    // void PrintLetters(int num, char ch1, char ch2) {
+    //     if (num > 0) {
+    //         printf("%c", ch1);
+    //         PrintLetters(num - 1, ch1, ch2);
+    //         printf("%c", ch2);
+    //         printf("%c", ch2);
+    //     };
+    // };
+
+    // PrintLetters(2, 'a', 'b');
+
+    // ============================================================================= laboratory 6.8
 
     return 0;
 };
