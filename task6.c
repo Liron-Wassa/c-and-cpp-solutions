@@ -287,5 +287,58 @@ int main() {
 
     // ============================================================================= laboratory 6.8
 
+    // int decrementDigits(int number) {
+    //     if (number == 0) return 0;
+    //     return (((number % 10) + 9) % 10) + decrementDigits(number / 10) * 10;
+    // };
+    
+    // int incrementDigits(int number) {
+    //     if (number == 0) return 0;
+    //     return (((number % 10) + 1) % 10) + incrementDigits(number / 10) * 10;
+    // };
+
+    // printf("%d\n", decrementDigits(879021));
+
+    // ============================================================================= laboratory 6.9
+
+    int isSumOfNumberIsEven(int number) {
+        if (number < 9) return number;
+        return ((number % 10) + isSumOfNumberIsEven(number / 10)) % 2;
+    };
+
+    printf("%d\n", isSumOfNumberIsEven(12345));
+
+    // ============================================================================= laboratory 6.10
+
+    // int checkPositionNumbersWeight(int number) {
+    //     if (number <= 0) return 1;
+
+    //     if (((number % 10) % 2 == 0) && ((number / 10) % 10) % 2 != 0) {
+    //         return checkPositionNumbersWeight(number / 100);
+    //     };
+
+    //     return 0;
+    // };
+
+    // printf("%d\n", checkPositionNumbersWeight(343418));
+
+    // ============================================================================= laboratory 6.11
+
+    // int checkReplacedNumbers(int number) {
+    //     if (number < 9) return 1;
+
+    //     if (((number % 10) % 2 == 0) && ((number / 10) % 10) % 2 != 0) {
+    //         return checkReplacedNumbers(number / 10);
+    //     } else if (((number % 10) % 2 != 0) && ((number / 10) % 10) % 2 == 0) {
+    //         return checkReplacedNumbers(number / 10);
+    //     };
+
+    //     return 0;
+    // };
+
+    // printf("%d\n", checkReplacedNumbers(234));
+
+    // ============================================================================= laboratory 6.12
+
     return 0;
 };
