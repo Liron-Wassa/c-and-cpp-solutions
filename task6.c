@@ -302,8 +302,17 @@ int main() {
     // ============================================================================= laboratory 6.9
 
     int isSumOfNumberIsEven(int number) {
-        if (number < 9) return number;
+        if (number < 10) return number;
         return ((number % 10) + isSumOfNumberIsEven(number / 10)) % 2;
+    };
+    
+    int isSumOfNumberIsEven(int number) {
+        int result;
+        if (number < 10) return number % 2 == 0 ? 1 : 0;
+        result = isSumOfNumberIsEven(number / 10);
+
+        if (number % 10 % 2 == 0) return result == 1 ? 1 : 0;
+        return result == 1 ? 0 : 1;
     };
 
     printf("%d\n", isSumOfNumberIsEven(12345));
