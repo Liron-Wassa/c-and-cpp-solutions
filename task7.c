@@ -29,7 +29,7 @@ int main() {
     // int arr[SIZE], length = sizeof(arr) / sizeof(int);
     // InputArray(arr, length);
 
-    // ============================================================================= class 8.1
+    // ============================================================================= class 7.1
 
     // int arr[] = {1, 2, 3, 4, 5}, length = sizeof(arr) / sizeof(int);
     // int max = INT_MIN, min = INT_MAX, sum = 0, isEven = 0;
@@ -37,19 +37,19 @@ int main() {
     // ArrCalc(arr, length, &max, &min, &sum, &avg, &isEven);
     // printf("max: %d min: %d sum: %d isEven: %d avg: %lf\n", max, min, sum, isEven, avg);
 
-    // ============================================================================= class 8.2
+    // ============================================================================= class 7.2
 
     // int arr[] = {1, 2, 3, 4, 5}, length = sizeof(arr) / sizeof(int), isVeryAscending = 1;
 
     // printf("%d %d\n", isVeryAscending, isAscendingListIterative(arr, length, &isVeryAscending));
     // printf("isVery: %d is: %d\n", isVeryAscending, isAscendingListRecursion(arr, length, &isVeryAscending));
 
-    // ============================================================================= class 8.3
+    // ============================================================================= class 7.3
 
     // int arr[SIZE] = {1, 2, 3, 4, 5}, length = sizeof(arr) / sizeof(int);
     // printf("Result: %d\n", isSumOfNumberEqualToHisNeighbors(arr, length));
 
-    // ============================================================================= class 8.4
+    // ============================================================================= class 7.4
 
     // int i, arr[SIZE] = {1, 2, 3, 4, 5}, length = sizeof(arr) / sizeof(int);
     // ReverseListIterative(arr, length);
@@ -62,37 +62,37 @@ int main() {
 
     // printf("\n");
 
-    // ============================================================================= class 8.5
+    // ============================================================================= class 7.5
      
     // int num1Ptr = 6, num2Ptr = 9, num3Ptr = 1;
     // ReplaceValues(&num1Ptr, &num2Ptr, &num3Ptr);
     // printf("Num1: %d Num2: %d Num3: %d\n", num1Ptr, num2Ptr, num3Ptr);
 
-    // ============================================================================= laboratory 8.1
+    // ============================================================================= laboratory 7.1
 
     // int counterOfSmallestNumbers = 0;
     // double averageNumber = calculateAverage(9, 3, &counterOfSmallestNumbers);
     // printf("average: %lf counter: %d\n", averageNumber, counterOfSmallestNumbers);
 
-    // ============================================================================= laboratory 8.2
+    // ============================================================================= laboratory 7.2
 
     // double nPtr, cPtr;
     // double derivative = calculateDerivative(3, 2, 4, &nPtr, &cPtr);
     // printf("Derivative is: %lf n: %lf c: %lf\n", derivative, nPtr, cPtr); 
 
-    // ============================================================================= laboratory 8.3
+    // ============================================================================= laboratory 7.3
 
     // int arr[SIZE] = {1, 2, 3, 4, 5}, length = sizeof(arr) / sizeof(int);
     // printf("Max sum is: %d\n", sumOfTwoMaxNumbers(arr, length));
 
-    // ============================================================================= laboratory 8.4
+    // ============================================================================= laboratory 7.4
     
     // int arr[SIZE] = {1,6,2,4,3}, length = sizeof(arr) / sizeof(int), digit1, digit2;
     // int result = checkIfSumOfTwoNumbersIsSmallestThanKey(arr, length, 3, &digit1, &digit2);
 
     // printf("Result is: %d digit1: %d digit2: %d\n", result, digit1, digit2);
 
-    // ============================================================================= laboratory 8.5
+    // ============================================================================= laboratory 7.5
 
     // int arr[SIZE] = {1, 2, 3, 4, 5}, length = sizeof(arr)/ sizeof(int);
     // int maxEven = INT_MIN, even = 0, maxOdd = INT_MIN, odd = 0;
@@ -100,13 +100,13 @@ int main() {
     // MaxMax(arr, length, &maxEven, &even, &maxOdd, &odd);
     // printf("MaxEven: %d, Even: %d, MaxOdd: %d, Odd: %d", maxEven, even, maxOdd, odd);
 
-    // ============================================================================= laboratory 8.6
+    // ============================================================================= laboratory 7.6
 
     // int arr[SIZE] = {1,3,2,3,1}, length = sizeof(arr)/ sizeof(int);
     // printf("is a palindrome iterative %d\n", isPalindromeIterative(arr, length));
     // printf("is a palindrome recursion %d\n", isPalindromeRecursion(arr, length));
 
-    // ============================================================================= laboratory 8.7
+    // ============================================================================= laboratory 7.7
 
     // int arr[SIZE] = {1, 2, 3, 4, 5}, length = sizeof(arr) / sizeof(int);
     // RegularPrint(arr, length);
@@ -114,23 +114,23 @@ int main() {
     // ReversePrint(arr, length);
     // printf("\n");
 
-    // ============================================================================= laboratory 8.8
+    // ============================================================================= laboratory 7.8
 
     // int arr[] = {1,3,3,1}, length = sizeof(arr)/ sizeof(int);
     // printf("Average is: %lf\n", calculateAverageRecursion(arr, length));
 
-    // ============================================================================= laboratory 8.9
+    // ============================================================================= laboratory 7.9
 
     // double arr[SIZE] = {1.7, 2.65, 2.5, 4.1, 5.0}, length = sizeof(arr)/ sizeof(double);
     // printf("%d\n", checkNumbersOrders(arr, length));
 
-    // ============================================================================= laboratory 8.10
+    // ============================================================================= laboratory 7.10
 
     int arr[] = {1,2,5,9,20,40}, length = sizeof(arr) / sizeof(int);
     // printf("%d\n", isSuperArrayIterative(arr, length));
     printf("%d\n", isSuperArrayRecursion(arr, length));
 
-    // ============================================================================= laboratory 8.11
+    // ============================================================================= laboratory 7.11
 
     return 0;
 };
@@ -150,7 +150,7 @@ void InputArray(int arr[], int length) {
     printf("\n");
 };
 
-// ============================================================================= class 8.1
+// ============================================================================= class 7.1
 
 void ArrCalc(int arr[], int length, int *max, int *min, int *sum, double *avg, int *isEven) {
     int i;
@@ -174,7 +174,7 @@ void ArrCalc(int arr[], int length, int *max, int *min, int *sum, double *avg, i
     *avg = *sum / length;
 };
 
-// ============================================================================= class 8.2
+// ============================================================================= class 7.2
 
 int isAscendingListIterative(int arr[], int length, int *isVeryAscending) {
     int i, nextNumber, currentNumber;
@@ -216,7 +216,7 @@ int isAscendingListRecursion(int arr[], int length, int *isVeryAscending) {
     return isAscendingListRecursion(arr + 1, length - 1, isVeryAscending);
 };
 
-// ============================================================================= class 8.3
+// ============================================================================= class 7.3
 
 int isSumOfNumberEqualToHisNeighbors(int arr[], int length) {
     int i;
@@ -238,7 +238,7 @@ int isSumOfNumberEqualToHisNeighbors(int arr[], int length) {
     return 0;
 };
 
-// ============================================================================= class 8.4
+// ============================================================================= class 7.4
 
 void ReverseListIterative(int arr[], int length) {
     int i, numberFromStart, numberFromEnd;
@@ -264,7 +264,7 @@ void ReverseListRecursion(int arr[], int length) {
     };
 };
 
-// ============================================================================= class 8.5
+// ============================================================================= class 7.5
 
 void ReplaceValues(int *num1Ptr, int *num2Ptr, int *num3Ptr) {
     int tempNum;
@@ -286,7 +286,7 @@ void ReplaceValues(int *num1Ptr, int *num2Ptr, int *num3Ptr) {
     };
 };
 
-// ============================================================================= laboratory 8.1
+// ============================================================================= laboratory 7.1
 
 double calculateAverage(int num, int digit, int *counterOfSmallestNumbers) {
     int tempDigit, sum = 0;
@@ -310,7 +310,7 @@ double calculateAverage(int num, int digit, int *counterOfSmallestNumbers) {
     if (counter > 0) return sum / counter;
 };
 
-// ============================================================================= laboratory 8.2
+// ============================================================================= laboratory 7.2
 
 double calculateDerivative(double n, double x, double c, double *nPtr, double *cPtr) {
     *cPtr = n * c;
@@ -318,7 +318,7 @@ double calculateDerivative(double n, double x, double c, double *nPtr, double *c
     return *cPtr * pow(x, *nPtr);
 };
 
-// ============================================================================= laboratory 8.3
+// ============================================================================= laboratory 7.3
 
 int sumOfTwoMaxNumbers(int arr[], int length) {
     int i, maxSum = arr[0] + arr[1], tempSum;
@@ -333,7 +333,7 @@ int sumOfTwoMaxNumbers(int arr[], int length) {
     return maxSum;
 };
 
-// ============================================================================= laboratory 8.4
+// ============================================================================= laboratory 7.4
 
 int checkIfSumOfTwoNumbersIsSmallestThanKey(int arr[], int length, int key, int *digit1, int *digit2) {
     int i, j, counter = 0, tempSum;
@@ -355,7 +355,7 @@ int checkIfSumOfTwoNumbersIsSmallestThanKey(int arr[], int length, int key, int 
     return 0;
 };
 
-// ============================================================================= laboratory 8.5
+// ============================================================================= laboratory 7.5
 
 void MaxMax(int arr[], int length, int *maxEven, int *even, int *maxOdd, int *odd) {
     int i, isEvenNumber = 0, isOddNumber = 0;
@@ -382,7 +382,7 @@ void MaxMax(int arr[], int length, int *maxEven, int *even, int *maxOdd, int *od
     };
 };
 
-// ============================================================================= laboratory 8.6
+// ============================================================================= laboratory 7.6
 
 int isPalindromeIterative(int arr[], int length) {
     int i, firstItem, lastItem;
@@ -409,7 +409,7 @@ int isPalindromeRecursion(int arr[], int length) {
     return isPalindromeRecursion(arr + 1, length - 2);
 };
 
-// ============================================================================= laboratory 8.7
+// ============================================================================= laboratory 7.7
 
 void RegularPrint(int arr[], int length) {
     if (length > 0) {
@@ -425,7 +425,7 @@ void ReversePrint(int arr[], int length) {
     };
 };
 
-// ============================================================================= laboratory 8.8
+// ============================================================================= laboratory 7.8
 
 double calculateAverageRecursion(int arr[], int length) {
     double prevAverage;
@@ -437,7 +437,7 @@ double calculateAverageRecursion(int arr[], int length) {
     return (prevAverage + arr[length - 1]) / length;
 };
 
-// ============================================================================= laboratory 8.9
+// ============================================================================= laboratory 7.9
 
 int checkNumbersOrders(double arr[], int length) {
     if (length == 1) return 1;
@@ -457,7 +457,7 @@ int checkNumbersOrders(double arr[], int length) {
     return checkNumbersOrders(arr + 1, length - 1);
 };
 
-// ============================================================================= laboratory 8.10
+// ============================================================================= laboratory 7.10
 
 int isSuperArrayIterative(int arr[], int length) {
     int i, sumOfItems = arr[0], currentItem;
@@ -486,4 +486,4 @@ int isSuperArrayRecursion(int arr[], int length) {
     return 0;
 };
 
-// ============================================================================= laboratory 8.11
+// ============================================================================= laboratory 7.11
