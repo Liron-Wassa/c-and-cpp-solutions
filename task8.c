@@ -79,6 +79,7 @@ int main () {
     //     };
 
     //     free(tempList);
+    //     tempList = NULL;
     //     return 1;
     // };
 
@@ -117,6 +118,7 @@ int main () {
     //     };
 
     //     free(tempList);
+    //     tempList = NULL;
     //     return max - min;
     // };
 
