@@ -352,34 +352,34 @@ int main () {
 
     // ============================================================================= laboratory 8.9
 
-    int *replaceArrayItems(int arr[], int size) {
-        int i, j, item1, item2;
-        int *tempList = (int *)calloc(size, sizeof(int));
-        assert(tempList);
+    // int *replaceArrayItems(int arr[], int size) {
+    //     int i, j, item1, item2;
+    //     int *tempList = (int *)calloc(size, sizeof(int));
+    //     assert(tempList);
 
-        for (i = 0; i < size; i++) {
-            if (i == size - 1) {
-                tempList[i] = -1;
-            };
+    //     for (i = 0; i < size; i++) {
+    //         if (i == size - 1) {
+    //             tempList[i] = -1;
+    //         };
 
-            item1 = arr[i];
+    //         item1 = arr[i];
 
-            for (j = i + 1; j < size; j++) {
-                item2 = arr[j];
+    //         for (j = i + 1; j < size; j++) {
+    //             item2 = arr[j];
 
-                if (item2 > item1) {
-                    tempList[i] = item2;
-                    break;
-                };
+    //             if (item2 > item1) {
+    //                 tempList[i] = item2;
+    //                 break;
+    //             };
 
-                if (j == size - 1){
-                    tempList[i] = -1;
-                };
-            };
-        };
+    //             if (j == size - 1){
+    //                 tempList[i] = -1;
+    //             };
+    //         };
+    //     };
 
-        return tempList;
-    };
+    //     return tempList;
+    // };
 
     // ============================================================================= laboratory 8.10
 
