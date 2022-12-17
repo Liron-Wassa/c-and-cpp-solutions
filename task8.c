@@ -383,5 +383,74 @@ int main () {
 
     // ============================================================================= laboratory 8.10
 
+    // int getMaxNumber(int number) {
+    //     if (number == 0) return 0;
+
+    //     int maxNumber = getMaxNumber(number / 10);
+    //     if (number % 10 > maxNumber) return number % 10;
+    //     return maxNumber;
+    // };
+
+    // printf("%d\n", getMaxNumber(38479585));
+
+    // ============================================================================= additional 8.1
+
+    // void ReverseArray(int arr[], int size) {
+    //     int start, end;
+        
+    //     start = arr[0];
+    //     end = arr[size - 1];
+    //     arr[0] = end;
+    //     arr[size - 1] = start;
+
+    //     if (size >= 2) {
+    //         ReverseArray(arr + 1, size - 2);
+    //     };
+    // };
+
+    // ============================================================================= additional 8.2
+
+    // int isPalindrome(int arr[], int size) {
+    //     if (size < 2) return 1;
+
+    //     if (arr[0] == arr[size - 1]) return isPalindrome(arr + 1, size - 2);
+    //     else return 0;
+    // };
+
+    // int arr[] = {1,3,2,3,1}, size = sizeof(arr) / sizeof(int);
+
+    // printf("%d\n", isPalindrome(arr, size));
+
+    // ============================================================================= additional 8.3
+
+    // int isArraySorted(int arr[], int size) {
+    //     if (size < 2) return 1;
+    //     if (arr[1] >= arr [0]) return isArraySorted(arr + 1, size - 1);
+    //     return 0;
+    // };
+
+    // int arr[] = {1,3,5,6,11}, size = sizeof(arr) / sizeof(int);
+
+    // printf("%d\n", isArraySorted(arr, size));
+
+    // ============================================================================= additional 8.4
+
+    // int getSum(int arr[], int size) {
+    //     int max;
+
+    //     if (size <= 2) return arr[0] + arr[1];
+
+    //     max = getSum(arr + 1, size - 1);
+
+    //     if (arr[0] + arr[1] > max) return arr[0] + arr[1];
+    //     return max; 
+    // };
+
+    // int arr[] = {3,8,10,5,-7,7,9,-2,13}, size = sizeof(arr) / sizeof(int);
+
+    // printf("%d\n", getSum(arr, size));
+
+    // ============================================================================= additional 8.5
+
     return 0;
 };
