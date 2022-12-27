@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "test.h": "c",
-        "limits": "c"
+        "limits": "c",
+        "cmath": "c"
     }
 }
