@@ -2,6 +2,8 @@
     "files.associations": {
         "test.h": "c",
         "limits": "c",
-        "cmath": "c"
+        "cmath": "c",
+        "concepts": "c",
+        "type_traits": "c"
     }
 }
