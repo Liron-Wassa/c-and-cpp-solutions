@@ -1,8 +1,9 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<assert.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <assert.h>
 
-int main() {
+int main()
+{
     // int *removeDuplicateFromSortedList1(int arr[], int size) {
     //     int i, j = 1, uniqueValues = 1, prevValue = arr[0], *newList = NULL;
 
@@ -40,7 +41,7 @@ int main() {
 
     //         prevValue = arr[i];
     //     };
-    
+
     //     newList = (int *)realloc(newList, sizeof(int) * counter);
     //     assert(newList);
 

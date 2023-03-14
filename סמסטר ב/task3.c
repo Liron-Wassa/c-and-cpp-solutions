@@ -104,32 +104,21 @@ void Ex2 () {
 }
 
 void *realloc1(void *mem_block, unsigned size_old, unsigned size_new) {
-    void *new_list = NULL;
-    char *dest = NULL;
-    char *src = NULL;
-    char old_len = size_old / sizeof(char);
-    char new_len = size_new / sizeof(char);
-    int i;
+    char *src = (char *)mem_block;
+    char *dest = malloc(size_new);;
+    int i, min;
 
-    if (new_len == 0) return NULL;
+    int min_size = size_old < size_new ? size_old : size_new;
 
-    new_list = malloc(size_new);
-    dest = (char *)new_list;
-    src = (char *)mem_block;
+    if (!dest) return NULL;
 
-    if (new_list != NULL) {
-        for (i = 0; i < old_len; i++) {
-            if (i >= new_len) break;
-
-            dest[i] = src[i];
-        };
-
-        free(mem_block);
-
-        return new_list;
+    for (i = 0; i < min_size; i++) {
+        dest[i] = src[i];
     };
 
-    return NULL;
+    free(mem_block);
+
+    return (void *)dest;
 };
 
 int *arrcat(int *arr1, unsigned size1, int *arr2, unsigned size2) {
@@ -137,7 +126,7 @@ int *arrcat(int *arr1, unsigned size1, int *arr2, unsigned size2) {
 
     new_list = (int *)realloc1(arr1, size1 * sizeof(int), (size1 + size2) * sizeof(int));
 
-    if (new_list == NULL) return NULL;
+    if (!new_list) return NULL;
 
     for (i = 0; i < size2; i++) {
         new_list[size1 + i] = arr2[i];
