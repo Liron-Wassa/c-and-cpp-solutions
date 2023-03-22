@@ -238,7 +238,7 @@ int main () {
     // removeDuplicateV3(numbers, size, &uniqueSize, &uniques);
     // printf("uniques: %d\n", uniqueSize);
     // printArr(uniques, 5);
-    // free(uniques);  
+    // free(uniques);
 
     // ============================================================================= class 2.4
 

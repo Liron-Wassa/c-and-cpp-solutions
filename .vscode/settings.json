@@ -4,6 +4,7 @@
         "limits": "c",
         "cmath": "c",
         "concepts": "c",
-        "type_traits": "c"
+        "type_traits": "c",
+        "typeinfo": "c"
     }
 }
