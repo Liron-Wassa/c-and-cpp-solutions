@@ -15,7 +15,7 @@ int main() {
         int i, j, column = 1;
 
         for (i = 0; i < matrix_size; i++) {
-            matrix[i] = (int *)calloc(column, sizeof(int));
+            matrix[i] = (int *)malloc(column * sizeof(int));
         
             for (j = 0; j < column; j++) {
                 srand(time(NULL));
@@ -59,7 +59,7 @@ int main() {
         int i, j;
 
         for (i = 0; i < matrix_size; i++) {
-            matrix[i] = (int *)calloc(matrix_size - i, sizeof(int));
+            matrix[i] = (int *)malloc((matrix_size - i)  * sizeof(int));
         
             for (j = 0; j < matrix_size - i; j++) {
                 srand(time(NULL));
@@ -72,10 +72,9 @@ int main() {
 
     int getUpperTriangularMatrix(int **matrix, unsigned row, unsigned column) {
         if (row > column) return 0;
-        return matrix[row][column];
+        return matrix[row][column - row];
     }
 
-    // TODO: fix
     void printUpperTriangularMatrix() {
         int **matrix = createUpperTriangularMatrix(N);
         int i, j;
