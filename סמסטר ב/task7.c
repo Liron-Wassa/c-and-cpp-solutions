@@ -7,13 +7,12 @@
 void **creat2DArray(unsigned rows, unsigned columns);
 void printMatrix(int **matrix, unsigned rows, unsigned columns);
 void freeMemory(int **matrix, unsigned rows, unsigned columns);
+void swapPtr(void **ptr1, void **ptr2);
+void swap(int *value1, int *value2);
 
 int main () {
-    void replaceRows(void *matrix, unsigned row1, unsigned row2) {
-        char **tempMatrix = (char **)matrix;
-        char *tempRow = tempMatrix[row1];
-        tempMatrix[row1] = tempMatrix[row2];
-        tempMatrix[row2] = tempRow;
+    void replaceRows(void **matrix, unsigned row1, unsigned row2) {
+        swapPtr(&matrix[row1], &matrix[row2]);
     };
 
     // ============================================================================= class 7.1
@@ -22,9 +21,7 @@ int main () {
         int i, j, tempValue;
 
         for (i = 0; i < rows; i++) {
-            tempValue = matrix[i][col1];
-            matrix[i][col1] = matrix[i][col2];
-            matrix[i][col2] = tempValue;
+            swap(&matrix[i][col1], &matrix[i][col2]);
         }
     };
 
@@ -41,7 +38,7 @@ int main () {
     matrix[2][1] = 8;
     matrix[2][2] = 9;
 
-    replaceRows(matrix, 0, 1);
+    replaceRows((void **)matrix, 0, 1);
     replaceColumns(matrix, N, 0, 1);
     printMatrix(matrix, N, N);
     freeMemory(matrix, N, N);
@@ -51,6 +48,18 @@ int main () {
 
 
 // =================== helpers ===================
+
+void swap(int *value1, int *value2) {
+    int tempPtr = *value1;
+    *value1 = *value2;
+    *value2 = tempPtr;
+}
+
+void swapPtr(void **ptr1, void **ptr2) {
+    void *tempPtr = *ptr1;
+    *ptr1 = *ptr2;
+    *ptr2 = tempPtr;
+}
 
 void **creat2DArray(unsigned rows, unsigned columns) {
     int i;
