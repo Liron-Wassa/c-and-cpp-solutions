@@ -42,13 +42,6 @@ class Square {
         };
 
         bool isPointInsideSquare(int x, int y) {
-            int xTopLeft = this->x;
-            int yTopLeft = this->y + this->sideLength;
-            int xTopRight = xTopLeft + this->sideLength;
-            int yTopRight = yTopLeft;
-            int xBottomRight = xTopRight;
-            int yBottomRight = this->y;
-
             if (x >= this->x &&
                 x <= this->x + this->sideLength &&
                 y >= this->y &&
